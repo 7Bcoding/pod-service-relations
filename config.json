@@ -1,0 +1,26 @@
+{
+    "server": {
+        "bind": "127.0.0.1",
+        "port": "8080",
+        "session": {
+            "name": "mysession",
+            "secret": "SUPER_SECRET_STRING"
+        }
+    },
+    "datastore": {
+        "mysql":{
+            "uri": "root:ycK04Am2F^B0@tcp(127.0.0.1:3306)/kubernetes_data?charset=utf8&parseTime=True&loc=Local",
+            "maxConn": 20,
+            "maxIdle": 20,
+            "lifetime": 180
+        }
+    },
+    "log":{
+        "level": "debug",
+        "file": "pod_service.log",
+        "dir": "./logs"
+    },
+    "kube_api_server": {
+        "kube_config_path": "./config/kubernetes_config/online/"
+    }
+}
